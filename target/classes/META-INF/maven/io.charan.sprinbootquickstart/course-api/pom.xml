@@ -12,4 +12,13 @@
   </parent>
   <!-- We are making our project a child of Spring boot project -->
   <!-- Spring boot starter parent has all the default configurations in it -->
+  
+  <dependencies>
+  	<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+    <version>2.3.4.RELEASE</version>
+	</dependency>
+  </dependencies>
+  
 </project>
