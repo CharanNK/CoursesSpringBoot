@@ -2,17 +2,17 @@ package io.charan.springbootstarted.topic;
 
 import java.util.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class TopicController {
 	
+	@Autowired
+	private TopicService topicService;
+	
 	@RequestMapping("/topics")
 	public List<Topic> getAllTopics() {
-		return Arrays.asList(
-				new Topic("Java","Core Java","Description - Core JAVA"),
-				new Topic("Spring","Spring Framework","Description - Spring Framework"),
-				new Topic("JavaScript","JavaScript","Description - JavaScript")
-				);
+		return topicService.getAllTopics();
 	}
 }
